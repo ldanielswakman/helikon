@@ -4,21 +4,26 @@
 
   <head>
 
-    <title>Helikon</title>
+    <title>{{ .Title }}</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/p5.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="resources/js/scripts.js"></script>
 
   </head>
 
   <body>
     <!-- <div class="background"><img src="images/animated.gif" alt="" /></div> -->
-  	<h1><span class="text">Helikon</span><img src="images/helikon-logo.svg" alt="" /></h1>
+  	<h1><span class="text">{{ .Title }}</span><img src="images/helikon-logo.svg" alt="" /></h1>
+    {{ range where .Site.Pages "type" "artist" }}
+      <li>
+        Test
+      </li>
+    {{ end }}
     <div id="myContainer1"></div>
   </body>
 
