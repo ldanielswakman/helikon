@@ -11,7 +11,10 @@
 
     <link rel="stylesheet" href="style.css" />
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/p5.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/scripts.js"></script>
 
   </head>
@@ -19,7 +22,73 @@
   <body>
     <!-- <div class="background"><img src="images/animated.gif" alt="" /></div> -->
   	<h1><span class="text">Helikon</span><img src="images/helikon-logo.svg" alt="" /></h1>
-    <div id="myContainer1"></div>
+    <section class="section" id="canvas"></section>
+
+    <ul class="menu">
+      <li><a href="#releases">RELEASES</a></li>
+      <li><a href="#artists">ARTISTS</a></li>
+      <li><a href="#label">LABEL</a></li>
+    </ul>
+
+    <section class="section" id="releases">
+      <div class="block">
+
+        <h2>RELEASES</h2>
+        <ul>
+          <li>
+            <a class="item" href="#zaman-disi-yasam">
+              <figure class="thumb thumb--release"><img src="images/zaman-disi-yasam.jpg" alt="" /></figure>
+              <span class="item__info">
+                <h4>Zaman Dışı Yaşam</h4>
+                <p class="item__meta">Kutsal Kaan Bilgin<br>2017</p>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="section" id="artists">
+      <div class="block">
+
+        <h2>ARTISTS</h2>
+        <ul>
+          <li>
+            <a class="item" href="#onur-ertem">
+              <figure class="thumb thumb--artist"><img src="images/onur-ertem.jpg" alt="" /></figure>
+              <span class="item__info">
+                <h4>Onur Ertem</h4>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="item" href="#kutsal-kaan-bilgin">
+              <figure class="thumb thumb--artist"><img src="images/kutsal-kaan-bilgin.jpg" alt="" /></figure>
+              <span class="item__info">
+                <h4>Kutsal Kaan Bilgin</h4>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="section" id="label">
+      <div class="block">
+
+        <h2>LABEL</h2>
+
+        <div class="detail">
+          <p>
+            1982'de Ankara'da müziksever bir ailenin üç çocuğundan biri olarak dünyaya geldi. 16 yaşında elektrik gitar çalmaya başlayarak müzisyenlikle tanıştı. 18 yaşında klasik piyano eğitimi almaya başladı. 2004 yılında Bilkent Üniversitesi Bilgisayar Mühendisliği bölümünden mezun olana kadar Ankara'da yerel rock ve metal gruplarıyla çeşitli mekanlarda sahne aldı.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
   </body>
 
 </html>
