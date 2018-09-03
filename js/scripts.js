@@ -153,7 +153,7 @@ function calcWave() {
 
 
 	// varibile col settata come posizione del mouse
-	tethaMouseX = map(mouseX,0,width,-0.5,0.5);
+	tethaMouseX = map(mouseY,0,height,-0.5,0.5);
 
 	// for 'angular velocity' here
 	theta += tethaMouseX;
@@ -178,9 +178,9 @@ function calcWave() {
 function renderWave() {
 	// A simple way to draw the wave with an ellipse at each location
 	noStroke();
-	stroke("#000");
+	stroke("#fff");
 	strokeWeight(2);
-	fill("#000");
+	fill("#fff");
 	ellipseMode(CENTER);
 	for (var x = 0; x < yvalues.length; x++) {
 		ellipse(x*xspacing,height/2+yvalues[x],2,2);

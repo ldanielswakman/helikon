@@ -1,8 +1,8 @@
 /* Fonts */
 @font-face {
     font-family: 'Baron Neue';
-    src: url('fonts/BaronNeue.woff2') format('woff2'),
-        url('fonts/BaronNeue.woff') format('woff');
+    src: url('../fonts/BaronNeue.woff2') format('woff2'),
+        url('../fonts/BaronNeue.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -115,9 +115,12 @@ p + p {
 	position: sticky;
 	top: 0;
 	left: 0;
+	z-index: 10;
 	margin-top: -4.35rem;
 	display: flex;
 	width: 100%;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 @media screen and (min-width: 768px) {
 	.menu {
@@ -161,7 +164,7 @@ p + p {
 .section {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 }
 @media screen and (min-width: 768px) {
 	.section {
@@ -183,7 +186,10 @@ p + p {
 	padding: 2rem;
 }
 .section#label .block {
-	background: #7A8699;
+	background: rgba(255, 255, 255, 0.25);
+}
+.section#intro {
+	min-height: 100vh;
 }
 @media screen and (min-width: 768px) {
 	.section .block {
@@ -192,10 +198,10 @@ p + p {
 		padding-right: 1rem;
 	}
 	.section#artists .block {
-		margin-left: 33.33333%;
+		/*margin-left: 33.33333%;*/
 	}
 	.section#label .block {
-		margin-left: 66.66666%;
+		/*margin-left: 66.66666%;*/
 	}
 }
 
@@ -211,7 +217,7 @@ p + p {
 	background: #7A8699;
 
 	transition: all 0.3s ease-in-out;
-	transform: translateX(2rem);
+	transform: translateY(2rem);
 	opacity: 0;
 	pointer-events: none;
 }
@@ -222,7 +228,7 @@ p + p {
 	}
 }
 .section .detail.isActive {
-	transform: translateX(0);
+	transform: translateY(0);
 	opacity: 1;
 	pointer-events: all;
 }
@@ -271,7 +277,10 @@ p + p {
 
 
 
-/* List item*/
+/* List & item */
+.list {
+	margin: 3rem 0;
+}
 .item {
 	display: flex;
 	margin-left: -0.5rem;
