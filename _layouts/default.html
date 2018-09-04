@@ -5,8 +5,20 @@
 
   <body>
     <section class="section" id="intro">
+
       <div id="canvas"></div>
+
       <h1><span class="text">Helikon</span><img class="logo" src="images/helikon-logo.svg" alt="" /></h1>
+
+      <div class="lang-switcher">
+        {% if site.lang == "en" %}
+          {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+          <a href="{{ link2 }}" >{% t global.turkish %}</a>
+        {% else %}
+          {% capture link1 %}{{ site.baseurl_root }}en{{ page.url}}{% endcapture %}
+          <a href="{{ link1 }}" >{% t global.english %}</a>
+        {% endif %}
+      </div>
     </section>
     
     {% include nav.html %}
@@ -15,6 +27,7 @@
       <div class="block">
 
         <h2>RELEASES</h2>
+
         <ul class="list">
           <li>
             <a class="item" href="#zaman-disi-yasam">

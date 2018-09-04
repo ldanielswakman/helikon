@@ -119,8 +119,8 @@ p + p {
 	margin-top: -4.35rem;
 	display: flex;
 	width: 100%;
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	/*border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
 }
 @media screen and (min-width: 768px) {
 	.menu {
@@ -157,6 +157,25 @@ p + p {
 .menu a.isActive {
 	color: rgba(255, 255, 255, 0.9);
 }
+
+
+
+
+/* Lang switcher */
+.lang-switcher {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.lang-switcher a {
+	display: flex;
+	padding: 2rem;
+	opacity: 0.5;
+}
+.lang-switcher a:hover {
+	opacity: 1;
+}
+
 
 
 
