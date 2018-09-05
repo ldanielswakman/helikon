@@ -1,8 +1,8 @@
 ---
 title: Kutsal Kaan Bilgin
 position: troublemaker
----
 
+---
 1982'de Ankara'da müziksever bir ailenin üç çocuğundan biri olarak dünyaya geldi. 16 yaşında elektrik gitar çalmaya başlayarak müzisyenlikle tanıştı. 18 yaşında klasik piyano eğitimi almaya başladı. 2004 yılında Bilkent Üniversitesi Bilgisayar Mühendisliği bölümünden mezun olana kadar Ankara'da yerel rock ve metal gruplarıyla çeşitli mekanlarda sahne aldı.
 
 2004 yazında İstanbul'a taşındı ve 2005 yazında Londra'ya taşınana kadar Peyote ve Karga Bar'da DJ’lik yaptı.
@@ -15,4 +15,4 @@ position: troublemaker
 
 2013 sonuna doğru tekrar Londra'ya taşındı ve Londra Cafe Music stüdyolarında bas gitarda Steve Lewinson (Simply Red, Massive Attack, Kylie Minogue), davulda Nate Wood (Kneebody, Tigran Hamasyan, Kimbra), prodüksiyonda Mark Sutherland ve Cherif Hashizume eşliğinde ilk albümünün kayıtlarına başladı. Albümün mastering'i 2014 Mayıs'ında Londra Electric Mastering'de Guy Davie tarafından yapıldı.
 
-2014 yılının sonuna doğru tekrar İstanbul'a taşındı. Bir süre müzik dünyasından uzak kalarak şarkı yazmaya devam etti. Bu süre içinde Timur Selçuk'tan kompozisyon dersleri aldı. 2016-2017 arasında Aylin Taşar'dan şan dersleri aldı. 2017 yılında aranjörlük çalışmalarına başladı ve aynı yılın sonbaharında tekrar sahneye dönerek Kaset Mitanni ve Kaset Kadıköy'de canlı performanslarına başladı. 2018 Mart'ında ilk albümü "Zaman Dışı Yaşam"ı kendi müzik şirketi Helikon üzerinden dijital platformlarda yayınladı. 
+2014 yılının sonuna doğru tekrar İstanbul'a taşındı. Bir süre müzik dünyasından uzak kalarak şarkı yazmaya devam etti. Bu süre içinde Timur Selçuk'tan kompozisyon dersleri aldı. 2016-2017 arasında Aylin Taşar'dan şan dersleri aldı. 2017 yılında aranjörlük çalışmalarına başladı ve aynı yılın sonbaharında tekrar sahneye dönerek Kaset Mitanni ve Kaset Kadıköy'de canlı performanslarına başladı. 2018 Mart'ında ilk albümü "Zaman Dışı Yaşam"ı kendi müzik şirketi Helikon üzerinden dijital platformlarda yayınladı.

@@ -10,4 +10,5 @@ fields:
   name: image
   label: image
 pages:
+- _artists/kutsal-kaan-bilgin.md
 - _artists/onur-ertem.md
