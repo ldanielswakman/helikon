@@ -1,0 +1,19 @@
+---
+---
+
+// Base
+@import 'base/variables.scss';
+@import 'base/mixins.scss';
+@import 'base/reset.scss';
+@import 'base/typography.scss';
+@import 'base/generic.scss';
+
+
+// Components
+@import 'component/lang-switcher';
+@import 'component/list';
+@import 'component/menu';
+@import 'component/section';
+
+
+// Don't put any styles here directly; instead work with the files in the _scss folder

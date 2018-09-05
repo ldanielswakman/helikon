@@ -1,0 +1,45 @@
+// Menu
+.menu {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	margin-top: -4.35rem;
+	display: flex;
+	width: 100%;
+
+	@include tabletAndUp() {
+		margin-top: -10.35rem;
+	}
+}
+/*.menu.isStuck {
+	background: #161C26;
+}*/
+.menu li {
+	flex: 1;
+}
+.menu a {
+	display: block;
+	padding: 1rem;
+	font-family: "Baron Neue";
+	letter-spacing: 0.05rem;
+	font-size: 1.125rem;
+	line-height: 2rem;
+	color: rgba(255, 255, 255, 0.2);
+	text-align: center;
+}
+@media screen and (min-width: 768px) {
+	.menu a {
+		padding: 4rem;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+}
+.menu a:hover {
+	color: $white;
+	background: rgba(255, 255, 255, 0.05);
+}
+.menu a.isActive {
+	color: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,112 @@
+// Section
+.section {
+	display: flex;
+	flex-direction: column;
+	/*min-height: 100vh;*/
+}
+@media screen and (min-width: 768px) {
+	.section {
+		flex-direction: row;
+	}
+}
+.section h2 {
+	margin: -2rem -2rem 0 -2rem;
+	padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+	.section h2 {
+		margin: -4rem -1rem 0 -4rem;
+		padding: 4rem;
+	}
+}
+.section .block {
+	flex: 1;
+	padding: 2rem;
+}
+.section#label .block {
+	background: rgba(255, 255, 255, 0.25);
+}
+.section#intro {
+	min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+	.section .block {
+		max-width: 33.33333%;
+		padding: 4rem;
+		padding-right: 1rem;
+	}
+	.section#artists .block {
+		/*margin-left: 33.33333%;*/
+	}
+	.section#label .block {
+		/*margin-left: 66.66666%;*/
+	}
+}
+
+.section .detail {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*align-self: center;*/
+	flex: 1;
+	padding: 2rem;
+	padding-top: 4rem;
+	background: #7A8699;
+
+	transition: all 0.3s ease-in-out;
+	transform: translateY(2rem);
+	opacity: 0;
+	pointer-events: none;
+}
+@media screen and (min-width: 768px) {
+	.section .detail {
+		max-width: 66.66666%;
+		padding: 4rem;
+	}
+}
+.section .detail.isActive {
+	transform: translateY(0);
+	opacity: 1;
+	pointer-events: all;
+}
+.section .detail:before {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 3.5rem;
+	border: 0.5rem solid transparent;
+	border-bottom-color: #7A8699;
+}
+@media screen and (min-width: 768px) {
+	.section .detail:before {
+		bottom: auto;
+		top: 50%;
+		left: auto;
+		right: 100%;
+		border: 0.5rem solid transparent;
+		border-right-color: #7A8699;
+	}
+}
+.section .detail .meta {
+	opacity: 0.5;
+}
+.detail__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	padding: 2rem;
+	font-weight: 300;
+	font-size: 3rem;
+	opacity: 0.25;
+}
+.detail__close:hover {
+	opacity: 0.8;
+}
+
+.detail__player {
+	position: absolute;
+	bottom: 0;
+	right: 100%;
+}

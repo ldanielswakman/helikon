@@ -1,0 +1,14 @@
+// Lang switcher
+.lang-switcher {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.lang-switcher a {
+	display: flex;
+	padding: 2rem;
+	opacity: 0.5;
+}
+.lang-switcher a:hover {
+	opacity: 1;
+}
