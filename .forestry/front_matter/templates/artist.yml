@@ -9,3 +9,5 @@ fields:
 - type: file
   name: image
   label: image
+pages:
+- _artists/onur-ertem.md
