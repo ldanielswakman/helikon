@@ -10,7 +10,7 @@
 	width: 100%;
 
 	@include tabletAndUp() {
-		margin-top: -10.35rem;
+		margin-top: -6rem;
 	}
 }
 /*.menu.isStuck {
@@ -28,10 +28,9 @@
 	line-height: 2rem;
 	color: rgba(255, 255, 255, 0.2);
 	text-align: center;
-}
-@media screen and (min-width: 768px) {
-	.menu a {
-		padding: 4rem;
+
+	@include tabletAndUp() {
+		padding: 2rem 4rem;
 		font-size: 1.5rem;
 		text-align: left;
 	}

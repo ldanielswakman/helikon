@@ -76,20 +76,20 @@ function navOnScroll($target, $nav) {
 
 
 
-// Component: Detail Interaction
+// Component: Modal Interaction
 $(document).ready(function() {
 
   // on page load, check if dialog should be open
   if(window.location.hash.length > 0) {
-    openDetail(window.location.hash);
+    openModal(window.location.hash);
   }
 
   $('.item').click(function(e) {
-    openDetail($(this).attr('href'));
+    openModal($(this).attr('href'));
   });
 });
 
-function openDetail(target) {
+function openModal(target) {
   if($(target).length > 0) {
     $(target).addClass('isActive');
   } else {
@@ -97,7 +97,7 @@ function openDetail(target) {
   }
 }
 
-function closeDetail() {
+function closeModal() {
   $('.detail').removeClass('isActive');
   updateHash('');
 }
