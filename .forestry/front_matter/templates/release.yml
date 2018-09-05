@@ -16,3 +16,5 @@ fields:
       section: artists
   label: artist
   name: artist
+pages:
+- _releases/zaman-disi-yasam.md
