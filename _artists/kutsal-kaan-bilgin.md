@@ -1,6 +1,5 @@
 ---
 title: Kutsal Kaan Bilgin
-position: troublemaker
 image: "/uploads/kutsal.jpg"
 
 ---

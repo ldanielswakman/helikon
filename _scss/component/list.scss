@@ -41,10 +41,16 @@
 	max-width: 4rem;
 	border-radius: 0.125rem;
 	overflow: hidden;
-}
-.thumb img {
-	display: block;
-}
-.thumb.thumb--artist {
-	border-radius: 50%;
+
+	img {
+		display: block;
+	}
+	&--artist {
+		border-radius: 50%;
+	}
+	&--empty {
+		width: 4rem;
+		height: 4rem;
+		background: rgba($white, 0.1);
+	}
 }

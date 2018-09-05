@@ -9,6 +9,9 @@ fields:
 - type: text
   name: year
   label: year
+- type: file
+  name: image
+  label: image
 - type: select
   config:
     source:
@@ -16,5 +19,8 @@ fields:
       section: artists
   label: artist
   name: artist
+- type: text
+  name: spotify_id
+  label: Spotify ID
 pages:
 - _releases/zaman-disi-yasam.md
