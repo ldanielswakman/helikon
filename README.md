@@ -1,5 +1,5 @@
 # Helikon
-Jekyll site for https://helikon.media
+Jekyll site for [helikon.media](https://helikon.media)
 
 ### Credits
 This site is built by L Daniel Swakman, [ldaniel.eu](https://ldaniel.eu)
