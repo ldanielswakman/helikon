@@ -90,6 +90,7 @@ $(document).ready(function() {
 });
 
 function openModal(target) {
+  closeModal();
   if($(target).length > 0) {
     $(target).addClass('isActive');
   } else {
@@ -98,7 +99,7 @@ function openModal(target) {
 }
 
 function closeModal() {
-  $('.detail').removeClass('isActive');
+  $('.modal').removeClass('isActive');
   updateHash('');
 }
 
