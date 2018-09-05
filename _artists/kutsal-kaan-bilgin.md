@@ -1,5 +1,5 @@
 ---
-name: Kutsal Kaan Bilgin
+title: Kutsal Kaan Bilgin
 position: troublemaker
 ---
 

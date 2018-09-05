@@ -76,7 +76,7 @@
               <a class="item" href="#{{ artist.slug }}">
                 <figure class="thumb thumb--artist"><img src="images/onur-ertem.jpg" alt="" /></figure>
                 <span class="item__info">
-                  <h4>{{ artist.name }}</h4>
+                  <h4>{{ artist.title }}</h4>
                   {{ artist.position }}
                 </span>
               </a>
@@ -84,7 +84,7 @@
 
             <div class="modal" id="{{ artist.slug }}">
               <a href="javascript:closeModal()" class="modal__close">&times;</a>
-              <h2>{{ artist.name }}</h2>
+              <h2>{{ artist.title }}</h2>
               <p class="meta"><a href="#kutsal-kaan-bilgin">Kutsal Kaan Bilgin</a>, 2017</p>
               {{ artist.content | markdownify }}
             </div>
