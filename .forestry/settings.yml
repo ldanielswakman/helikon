@@ -9,16 +9,21 @@ sections:
   label: Sections
   create: all
   match: "**/*"
+  templates:
+  - section
 - type: directory
   path: _artists
   label: Artists
   create: all
   match: "**/*"
+  templates:
+  - artist
 - type: directory
   path: _releases
   label: Releases
   create: all
   match: "**/*"
+  - release
 - type: jekyll-posts
   label: Posts
   create: all
