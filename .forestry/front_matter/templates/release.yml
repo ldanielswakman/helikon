@@ -1,0 +1,18 @@
+---
+label: Release
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: title
+  name: title
+- type: text
+  name: year
+  label: year
+- type: select
+  config:
+    source:
+      type: pages
+      section: artists
+  label: artist
+  name: artist
