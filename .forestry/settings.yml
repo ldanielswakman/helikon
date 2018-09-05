@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: 
-webhook_url:
+webhook_url: 
 sections:
 - type: directory
   path: _sections
@@ -21,8 +21,8 @@ sections:
   match: "**/*"
 - type: jekyll-posts
   label: Posts
-  hidden: true
   create: all
+  hidden: true
 - type: jekyll-pages
   label: Pages
   create: all
