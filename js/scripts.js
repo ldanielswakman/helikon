@@ -85,6 +85,7 @@ $(document).ready(function() {
   }
 
   $('.item').click(function(e) {
+    e.preventDefault();
     openModal($(this).attr('href'));
   });
 });

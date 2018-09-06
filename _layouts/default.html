@@ -28,10 +28,12 @@
     </div>
 
     <section class="section" id="releases">
-      <div class="block">
 
-        <h2>RELEASES</h2>
-        
+      <div class="section__header">
+        <a href="#releases"><h2>RELEASES</h2></a>
+      </div>
+
+      <div class="section__block">
         <ul class="list">
           {% for release in site.releases %}
 
@@ -51,16 +53,22 @@
 
             <div class="modal" id="{{ release.slug }}">
               <a href="javascript:closeModal()" class="modal__close">&times;</a>
-              <h2>{{ release.name }}</h2>
-              <p class="meta"><a href="#kutsal-kaan-bilgin">Kutsal Kaan Bilgin</a>, 2017</p>
+              <div class="modal__content">
 
-              {{ release.content | markdownify }}
+                {% if release.spotify_id.size > 0 %}
+                  <div class="modal__player">
+                    <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                  </div>
+                {% else if release.image.size > 0 %}
+                  <figure class="thumb" style="max-width: 300px;"><img src="{{ release.image }}" alt="" /></figure>
+                {% endif %}
 
-              {% if release.spotify_id.size > 0 %}
-                <div class="modal__player">
-                  <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-              {% endif %}
+                <h2>{{ release.name }}</h2>
+                <p class="meta"><a href="#kutsal-kaan-bilgin">Kutsal Kaan Bilgin</a>, 2017</p>
+
+                {{ release.content | markdownify }}
+
+              </div>
             </div>
 
           {% endfor %}
@@ -71,9 +79,12 @@
     </section>
 
     <section class="section" id="artists">
-      <div class="block">
 
-        <h2>ARTISTS</h2>
+      <div class="section__header">
+        <a href="#artists"><h2>ARTISTS</h2></a>
+      </div>
+
+      <div class="section__block">
 
         <ul class="list">
           {% for artist in site.artists %}
@@ -92,9 +103,11 @@
             </li>
 
             <div class="modal" id="{{ artist.slug }}">
-              <a href="javascript:closeModal()" class="modal__close">&times;</a>
-              <h2>{{ artist.title }}</h2>
-              {{ artist.content | markdownify }}
+              <div class="modal__content">
+                <a href="javascript:closeModal()" class="modal__close">&times;</a>
+                <h2>{{ artist.title }}</h2>
+                {{ artist.content | markdownify }}
+              </div>
             </div>
 
           {% endfor %}
@@ -104,15 +117,28 @@
     </section>
 
     <section class="section" id="label">
-      <div class="block">
 
-        <h2>LABEL</h2>
+      <div class="section__header">
+        <a href="#label"><h2>LABEL</h2></a>
+      </div>
 
-        <p>2017 yılında İstanbul’da kurulan Helikon, ismini 1952’de Ankara’da kurulan, kurucuları arasında besteciler Bülent Arel ve İlhan Usmanbaş’ın bulunduğu Helikon Derneği’nden alır. Dernek, 1955 yılında yaşanan 6-7 Eylül Olayları sonrasında adının Yunanca kaynaklı olmasından ötürü sıkı yönetim tarafından kapatılmıştır.</p>
+      <div class="row" style="flex: 1;">
 
-        <p>Helikon, mitolojide ilham perileri için kutsal sayılan Aganippe ve Hippocrene kaynaklarının bulunduğu dağın adıdır. Şiirsel ilhamla ilişkilendirilir.</p>
+        <div class="col-xs-12 col-sm-8">
+          <div class="section__block">
 
-        </p>
+            <p>2017 yılında İstanbul’da kurulan Helikon, ismini 1952’de Ankara’da kurulan, kurucuları arasında besteciler Bülent Arel ve İlhan Usmanbaş’ın bulunduğu Helikon Derneği’nden alır. Dernek, 1955 yılında yaşanan 6-7 Eylül Olayları sonrasında adının Yunanca kaynaklı olmasından ötürü sıkı yönetim tarafından kapatılmıştır.</p>
+
+            <p>Helikon, mitolojide ilham perileri için kutsal sayılan Aganippe ve Hippocrene kaynaklarının bulunduğu dağın adıdır. Şiirsel ilhamla ilişkilendirilir.</p>
+
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <figure>
+            <img src="uploads/helikon-poster.jpg" alt="Helikon" />
+          </figure>
+        </div>
 
       </div>
     </section>

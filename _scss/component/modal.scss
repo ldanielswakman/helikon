@@ -9,8 +9,6 @@
 	/*align-self: center;*/
 	flex: 1;
 	height: calc(100% - #{$menuHeight});
-	padding: 2rem;
-	padding-top: 4rem;
 	background: #7A8699;
 
 	transition: all 0.3s ease-in-out;
@@ -23,7 +21,17 @@
 		top: $menuHeight;
 		height: calc(100% - #{$menuHeight});
 		max-width: 66.66666%;
-		padding: 4rem;
+	}
+
+	&__content {
+		max-height: 100%;
+		padding: 2rem;
+		padding-top: 4rem;
+		overflow: scroll;
+
+		@include tabletAndUp() {
+			padding: 4rem;
+		}
 	}
 }
 .section.isActive .modal.isActive {
@@ -66,8 +74,8 @@
 	opacity: 0.8;
 }
 
-.modal__player {
-	position: absolute;
-	bottom: 0;
-	right: 100%;
-}
+// .modal__player {
+// 	position: absolute;
+// 	bottom: 0;
+// 	right: 100%;
+// }
