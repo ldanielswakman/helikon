@@ -4,41 +4,40 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 5;
 	margin-top: -4.35rem;
-	display: flex;
 	width: 100%;
+	max-width: 100vw;
+	overflow: hidden;
 
 	@include tabletAndUp() {
 		margin-top: -6rem;
 	}
-}
-/*.menu.isStuck {
-	background: #161C26;
-}*/
-.menu li {
-	flex: 1;
-}
-.menu a {
-	display: block;
-	padding: 1rem;
-	font-family: "Baron Neue";
-	letter-spacing: 0.05rem;
-	font-size: 1.125rem;
-	line-height: 2rem;
-	color: rgba(255, 255, 255, 0.2);
-	text-align: center;
 
-	@include tabletAndUp() {
-		padding: 2rem 4rem;
-		font-size: 1.5rem;
-		text-align: left;
+	&.isStuck {
+		background: rgba($dark, 0.8);
 	}
-}
-.menu a:hover {
-	color: $white;
-	background: rgba(255, 255, 255, 0.05);
-}
-.menu a.isActive {
-	color: rgba(255, 255, 255, 0.9);
+
+	a {
+		display: block;
+		padding: 1rem;
+		font-family: "Baron Neue";
+		letter-spacing: 0.05rem;
+		font-size: 1.125rem;
+		line-height: 2rem;
+		color: rgba($white, 0.2);
+
+		@include tabletAndUp() {
+			padding: 2rem 4rem;
+			font-size: 1.5rem;
+			text-align: left;
+		}
+		&:hover {
+			color: $white;
+			background: rgba($white, 0.05);
+		}
+		&.isActive {
+			color: rgba($white, 0.9);
+		}
+	}
 }

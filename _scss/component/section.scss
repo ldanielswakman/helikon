@@ -7,7 +7,6 @@
 
 	// Section Header
 	&__header h2 {
-		max-width: percentage(1/3);
 		padding: 1rem;
 
 		@include tabletAndUp() {
@@ -28,29 +27,7 @@
 
 	&#intro {
 		#canvas {
-			opacity: 0.25;
-		}
-	}
-
-	// Releases section
-	&#releases {
-		@include tabletAndUp() {
-			.section__block {
-				max-width: percentage(1/3);
-			}
-		}
-	}
-
-	// Artists section
-	&#artists {
-		.section__header h2 {
-			margin-left: percentage(1/3);
-		}
-		@include tabletAndUp() {
-			.section__block {
-				max-width: percentage(1/3);
-				margin-left: percentage(1/3);
-			}
+			opacity: 0.2;
 		}
 	}
 

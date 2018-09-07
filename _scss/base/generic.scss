@@ -8,6 +8,8 @@ body, html {
 
 	background: $dark;
 	color: rgba($white, 0.9);
+
+	-webkit-tap-highlight-color: rgba($white, 0.5);
 }
 
 ::-moz-selection {
@@ -20,3 +22,15 @@ body, html {
 }
 
 figure img { max-width: 100%; }
+
+.row {
+	&--nopadding {
+		margin-left: 0;
+		margin-right: 0;
+
+		& > [class*="col-"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

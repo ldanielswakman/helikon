@@ -5,8 +5,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Helikon, İstanbul merkezli alternatif bir müzik markasıdır.
 description_en: >-
   Helikon is an alternative music label based in İstanbul
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "https://helikon.media" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://helikon.media" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ldaniel.eu/_/helikon" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ldanielswakman
 github_username:  ldanielswakman
 

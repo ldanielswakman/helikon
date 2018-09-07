@@ -24,97 +24,122 @@
     
     {% include nav.html %}
 
-    <div style="padding: 3rem;">
-    </div>
+    <div class="section">
 
-    <section class="section" id="releases">
+      <div class="row row--nopadding">
+        <section class="col-xs-12 col-sm-4" id="releases">
 
-      <div class="section__header">
-        <a href="#releases"><h2>RELEASES</h2></a>
-      </div>
+          <div class="section__header">
+            <a href="#releases"><h2>RELEASES</h2></a>
+          </div>
 
-      <div class="section__block">
-        <ul class="list">
-          {% for release in site.releases %}
+          <div class="section__block">
+            <ul class="list">
+              {% for release in site.releases %}
 
-            <li>
-              <a class="item" href="#{{ release.slug }}">
-                {% if release.image.size > 0 %}
-                  <figure class="thumb thumb--release"><img src="{{ release.image }}" alt="" /></figure>
-                {% else %}
-                  <figure class="thumb thumb--release thumb--empty"></figure>
-                {% endif %}
-                <span class="item__info">
-                  <h4>{{ release.title }}</h4>
-                  {{ release.year }}
-                </span>
-              </a>
-            </li>
+                <li>
+                  <a class="item" href="#{{ release.slug }}">
+                    {% if release.image.size > 0 %}
+                      <figure class="thumb thumb--release"><img src="{{ release.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    {% else %}
+                      <figure class="thumb thumb--release thumb--empty"></figure>
+                    {% endif %}
+                    <span class="item__info">
+                      <h4>{{ release.title }}</h4>
+                      <p class="meta">{{ release.year }}</p>
+                    </span>
+                  </a>
+                </li>
 
-            <div class="modal" id="{{ release.slug }}">
-              <a href="javascript:closeModal()" class="modal__close">&times;</a>
-              <div class="modal__content">
+                <div class="modal" id="{{ release.slug }}">
+                  <a href="javascript:closeModal()" class="modal__close">&times;</a>
+                  <div class="modal__content">
 
-                {% if release.spotify_id.size > 0 %}
-                  <div class="modal__player">
-                    <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <h2>{{ release.title }}</h2>
+
+                    {% if release.spotify_id.size > 0 %}
+                      <div class="modal__player">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                      </div>
+                    {% endif %}
+
+                    <p class="meta"><a href="javascript:openModal('#kutsal-kaan-bilgin')">Kutsal Kaan Bilgin</a>, 2017</p>
+
+                    {{ release.content | markdownify }}
+
                   </div>
-                {% else if release.image.size > 0 %}
-                  <figure class="thumb" style="max-width: 300px;"><img src="{{ release.image }}" alt="" /></figure>
-                {% endif %}
 
-                <h2>{{ release.title }}</h2>
-                <p class="meta"><a href="#kutsal-kaan-bilgin">Kutsal Kaan Bilgin</a>, 2017</p>
+                  {% if release.image.size > 0 %}
+                    <figure class="modal__figure"><img src="{{ release.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                  {% endif %}
 
-                {{ release.content | markdownify }}
+                </div>
 
+              {% endfor %}
+            </ul>
+          </div>
+
+        </section>
+        <section class="col-xs-12 col-sm-4" id="artists">
+
+          <div class="section__header">
+            <div class="row row--nopadding">
+              <div class="col-xs-8 col-xs-offset-4 col-sm-12 col-sm-offset-0">
+                <a href="#artists"><h2>ARTISTS</h2></a>
               </div>
             </div>
+          </div>
 
-          {% endfor %}
-        </ul>
+          <div class="section__block">
+            
+            <ul class="list">
+              {% for artist in site.artists %}
+
+                <li>
+                  <a class="item" href="#{{ artist.slug }}">
+                    {% if artist.image.size > 0 %}
+                      <figure class="thumb thumb--artist"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    {% else %}
+                      <figure class="thumb thumb--artist thumb--empty"></figure>
+                    {% endif %}
+                    <span class="item__info">
+                      <h4>{{ artist.title }}</h4>
+                    </span>
+                  </a>
+                </li>
+
+                <div class="modal" id="{{ artist.slug }}">
+
+                  <div class="modal__content">
+                    <a href="javascript:closeModal()" class="modal__close">&times;</a>
+
+
+                    <h2>{{ artist.title | capitalize }}</h2>
+
+                    {% if artist.image.size > 0 %}
+                      <figure class="figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    {% endif %}
+
+                    {{ artist.content | markdownify }}
+
+                  </div>
+
+                  {% if artist.image.size > 0 %}
+                    <figure class="modal__figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                  {% endif %}
+
+                </div>
+
+              {% endfor %}
+            </ul>
+
+          </div>
+
+        </section>
 
       </div>
 
-    </section>
-
-    <section class="section" id="artists">
-
-      <div class="section__header">
-        <a href="#artists"><h2>ARTISTS</h2></a>
-      </div>
-
-      <div class="section__block">
-        
-        <ul class="list">
-          {% for artist in site.artists %}
-
-            <li>
-              <a class="item" href="#{{ artist.slug }}">
-                {% if artist.image.size > 0 %}
-                  <figure class="thumb thumb--artist"><img src="{{ artist.image }}" alt="" /></figure>
-                {% else %}
-                  <figure class="thumb thumb--artist thumb--empty"></figure>
-                {% endif %}
-                <span class="item__info">
-                  <h4>{{ artist.title }}</h4>
-                </span>
-              </a>
-            </li>
-
-            <div class="modal" id="{{ artist.slug }}">
-              <div class="modal__content">
-                <a href="javascript:closeModal()" class="modal__close">&times;</a>
-                <h2>{{ artist.title | capitalize }}</h2>
-                {{ artist.content | markdownify }}
-              </div>
-            </div>
-
-          {% endfor %}
-        </ul>
-
-      </div>
-    </section>
+    </div>
 
     <section class="section" id="label">
 

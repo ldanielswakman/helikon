@@ -93,6 +93,15 @@ function openModal(target) {
   closeModal();
   if($(target).length > 0) {
     $(target).addClass('isActive');
+
+    $parent_id = $(target).closest('section').attr('id');
+    
+    $.smoothScroll({
+      scrollTarget: '#' + $parent_id,
+      speed: 300,
+      easing: 'easeInOutQuart'
+    });
+
   } else {
     console.log('not found...');
   }
@@ -110,7 +119,7 @@ function closeModal() {
 // Component: Sine Curves on Canvas
 var xspacing = 1;   // Distance between each horizontal location
 var w;              // Width of entire wave
-var maxwaves = 5;   // total # of waves to add together
+var maxwaves = 8;   // total # of waves to add together
 
 var theta = 0.0;
 var amplitude = new Array(maxwaves);   // Height of wave
@@ -181,7 +190,6 @@ function renderWave() {
 	noStroke();
 	stroke("#fff");
 	strokeWeight(2);
-	fill("#fff");
 	ellipseMode(CENTER);
 	for (var x = 0; x < yvalues.length; x++) {
 		ellipse(x*xspacing,(height/2+yvalues[x]),2,2);
