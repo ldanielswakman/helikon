@@ -91,11 +91,21 @@ $menuHeight_sm: 6rem;
 		}
 
 		.figure {
-			 margin: 0 -1rem;
+			 margin: 0 -1rem 1rem;
 
 			 @include tabletAndUp() {
 			 	display: none;
 			 }
+		}
+	}
+
+	&__player iframe {
+		margin: 0 -1rem 1rem;
+		width: 100vw !important;
+
+		@include tabletAndUp() {
+			margin: 0;
+			width: auto !important;
 		}
 	}
 

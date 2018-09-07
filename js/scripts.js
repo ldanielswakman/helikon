@@ -164,6 +164,9 @@ function calcWave() {
 
 	// varibile col settata come posizione del mouse
 	tethaMouseX = map(mouseX,0,width,-0.5,0.5);
+  if(!mouseX || mouseX == 0) {
+    tethaMouseX = -0.1;
+  }
 
 	// for 'angular velocity' here
 	theta += tethaMouseX;
