@@ -25,6 +25,13 @@
 		}
 	}
 
+
+	&#intro {
+		#canvas {
+			opacity: 0.25;
+		}
+	}
+
 	// Releases section
 	&#releases {
 		@include tabletAndUp() {

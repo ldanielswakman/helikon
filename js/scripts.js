@@ -1,6 +1,6 @@
 // Component: smoothScroll
 $(document).ready(function() {
-  $('a[href^="#"]').smoothScroll({
+  $('a[href^="#"]').not('.item').smoothScroll({
     speed: 1000,
     easing: 'easeInOutQuart',
     afterScroll: function() {
@@ -85,7 +85,6 @@ $(document).ready(function() {
   }
 
   $('.item').click(function(e) {
-    e.preventDefault();
     openModal($(this).attr('href'));
   });
 });
@@ -155,7 +154,7 @@ function calcWave() {
 
 
 	// varibile col settata come posizione del mouse
-	tethaMouseX = map(mouseY,0,height,-0.5,0.5);
+	tethaMouseX = map(mouseX,0,width,-0.5,0.5);
 
 	// for 'angular velocity' here
 	theta += tethaMouseX;
@@ -178,13 +177,17 @@ function calcWave() {
 }
 
 function renderWave() {
-	// A simple way to draw the wave with an ellipse at each location
+	// A simple way to draw the wave with an ellipse at each location 
 	noStroke();
 	stroke("#fff");
 	strokeWeight(2);
 	fill("#fff");
 	ellipseMode(CENTER);
 	for (var x = 0; x < yvalues.length; x++) {
-		ellipse(x*xspacing,height/2+yvalues[x],2,2);
+		ellipse(x*xspacing,(height/2+yvalues[x]),2,2);
 	}
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

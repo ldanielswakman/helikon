@@ -63,7 +63,7 @@
                   <figure class="thumb" style="max-width: 300px;"><img src="{{ release.image }}" alt="" /></figure>
                 {% endif %}
 
-                <h2>{{ release.name }}</h2>
+                <h2>{{ release.title }}</h2>
                 <p class="meta"><a href="#kutsal-kaan-bilgin">Kutsal Kaan Bilgin</a>, 2017</p>
 
                 {{ release.content | markdownify }}
@@ -85,7 +85,7 @@
       </div>
 
       <div class="section__block">
-
+        
         <ul class="list">
           {% for artist in site.artists %}
 
@@ -105,7 +105,7 @@
             <div class="modal" id="{{ artist.slug }}">
               <div class="modal__content">
                 <a href="javascript:closeModal()" class="modal__close">&times;</a>
-                <h2>{{ artist.title }}</h2>
+                <h2>{{ artist.title | capitalize }}</h2>
                 {{ artist.content | markdownify }}
               </div>
             </div>
