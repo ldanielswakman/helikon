@@ -28,7 +28,7 @@ markdown: kramdown
 # Custom settings
 theme_color: "#161C26"
 keywords: 
-google_analytics: 
+google_analytics: UA-125404318-1
 
 # Multi language
 plugins:
