@@ -1,0 +1,11 @@
+---
+label: Section
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+pages:
+- _sections/label.md
+- _artists/onur-ertem.md

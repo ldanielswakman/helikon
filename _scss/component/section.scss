@@ -6,12 +6,8 @@
 	overflow-x: hidden;
 
 	// Section Header
-	&__header h2 {
-		padding: 1rem;
-
-		@include tabletAndUp() {
-			padding: 2rem 4rem;
-		}
+	&__header {
+		height: 6.75rem;
 	}
 
 	// Section Block
