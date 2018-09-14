@@ -1,0 +1,18 @@
+// Lang switcher
+.lang-switcher {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.lang-switcher a {
+	display: flex;
+	padding: 1rem;
+	opacity: 0.5;
+
+	@include tabletAndUp() {
+		padding: 2rem;
+	}
+}
+.lang-switcher a:hover {
+	opacity: 1;
+}

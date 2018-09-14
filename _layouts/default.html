@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+	{% include head.html %}
+
+  <body>
+
+    <section class="section" id="intro">
+
+      <div id="canvas"></div>
+
+      <h1><span class="text">Helikon</span><img class="logo" src="images/helikon-logo.svg" alt="" /></h1>
+
+      <div class="lang-switcher">
+        {% if site.lang == "en" %}
+          {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+          <a href="{{ link2 }}" >{% t global.turkish %}</a>
+        {% else %}
+          {% capture link1 %}{{ site.baseurl_root }}en{{ page.url}}{% endcapture %}
+          <a href="{{ link1 }}" >{% t global.english %}</a>
+        {% endif %}
+      </div>
+    </section>
+    
+    {% include nav.html %}
+
+    <div class="section">
+
+      <div class="row row--nopadding">
+        <section class="col-xs-12 col-sm-4" id="releases">
+
+          <div class="section__header"></div>
+
+          <div class="section__block">
+            <ul class="list">
+              {% for release in site.releases %}
+
+                <li>
+                  <a class="item" href="#{{ release.slug }}">
+                    {% if release.image.size > 0 %}
+                      <figure class="thumb thumb--release"><img src="{{ release.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    {% else %}
+                      <figure class="thumb thumb--release thumb--empty"></figure>
+                    {% endif %}
+                    <span class="item__info">
+                      <h4>{{ release.title }}</h4>
+                      <p class="meta">{{ release.year }}</p>
+                    </span>
+                  </a>
+                </li>
+
+                <div class="modal" id="{{ release.slug }}">
+                  <a href="javascript:closeModal()" class="modal__close">&times;</a>
+                  <div class="modal__content">
+
+                    <h2>{{ release.title }}</h2>
+
+                    {% if release.spotify_id.size > 0 %}
+                      <div class="modal__player">
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                      </div>
+                    {% endif %}
+
+                    <p class="meta"><a href="javascript:openModal('#kutsal-kaan-bilgin')">Kutsal Kaan Bilgin</a>, 2017</p>
+
+                    {{ release.content | markdownify }}
+
+                  </div>
+
+                  {% if release.image.size > 0 %}
+                    <figure class="modal__figure"><img src="{{ release.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                  {% endif %}
+
+                </div>
+
+              {% endfor %}
+            </ul>
+          </div>
+
+        </section>
+        <section class="col-xs-12 col-sm-4" id="artists">
+
+          <div class="section__header"></div>
+
+          <div class="section__block">
+            
+            <ul class="list">
+              {% for artist in site.artists %}
+
+                <li>
+                  <a class="item" href="#{{ artist.slug }}">
+                    {% if artist.image.size > 0 %}
+                      <figure class="thumb thumb--artist"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    {% else %}
+                      <figure class="thumb thumb--artist thumb--empty"></figure>
+                    {% endif %}
+                    <span class="item__info">
+                      <h4>{{ artist.title }}</h4>
+                    </span>
+                  </a>
+                </li>
+
+                <div class="modal" id="{{ artist.slug }}">
+
+                  <div class="modal__content">
+                    <a href="javascript:closeModal()" class="modal__close">&times;</a>
+
+
+                    <h2>{{ artist.title | capitalize }}</h2>
+
+                    {% if artist.image.size > 0 %}
+                      <figure class="figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    {% endif %}
+
+                    {{ artist.content | markdownify }}
+
+                  </div>
+
+                  {% if artist.image.size > 0 %}
+                    <figure class="modal__figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                  {% endif %}
+
+                </div>
+
+              {% endfor %}
+            </ul>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+    {% assign sections = site.sections %}
+    {% for section in sections %}
+      {% unless section.published == false %}
+
+        <section class="section" id="{{ section.slug }}">
+          <div class="section__header"></div>
+          {{ section.content }}
+        </section>
+
+      {% endunless %}
+    {% endfor %}
+
+  </body>
+
+</html>

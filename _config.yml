@@ -1,0 +1,40 @@
+# Site settings
+title: Helikon
+email: info@helikon.media
+description: >- # this means to ignore newlines until "baseurl:"
+  Helikon, İstanbul merkezli alternatif bir müzik markasıdır.
+description_en: >-
+  Helikon is an alternative music label based in İstanbul
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "https://helikon.media" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ldaniel.eu/_/helikon" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ldanielswakman
+github_username:  ldanielswakman
+
+# Structure settings
+collections:
+  sections:
+    title: Sections
+    output: false
+  artists:
+    title: Artists
+  releases:
+    title: Releases
+
+# Build settings
+markdown: kramdown
+
+# Custom settings
+theme_color: "#161C26"
+keywords: 
+google_analytics: UA-125404318-1
+
+# Multi language
+plugins:
+  - jekyll-multiple-languages-plugin
+languages: ["tr", "en"]
+
+# Scss build settings
+sass:
+  sass_dir: _scss

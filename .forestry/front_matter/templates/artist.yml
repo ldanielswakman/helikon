@@ -1,0 +1,14 @@
+---
+label: Artist
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: file
+  name: image
+  label: image
+pages:
+- _artists/kutsal-kaan-bilgin.md
+- _artists/onur-ertem.md
