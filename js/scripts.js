@@ -161,9 +161,8 @@ function calcWave() {
 	colorMode(RGB, 255);
 	background(17, 22, 30, 80);
 
-
 	// varibile col settata come posizione del mouse
-	tethaMouseX = map(mouseX,0,width,-0.5,0.5);
+	tethaMouseX = map(mouseX,0,width,-0.25,0.25);
   if(!mouseX || mouseX == 0) {
     tethaMouseX = -0.1;
   }
