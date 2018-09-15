@@ -2,7 +2,7 @@
 .section {
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	// min-height: 100vh;
 	overflow-x: hidden;
 
 	// Section Header
@@ -16,19 +16,26 @@
 		padding: 2rem;
 
 		@include tabletAndUp() {
-			padding: 4rem;
+			padding: 2rem 4rem;
 		}
 	}
 
 
 	&#intro {
+		min-height: 100vh;
 		#canvas {
 			opacity: 0.2;
 		}
 	}
 
+	&#releases, &#artists {
+		min-height: 100vh;
+		@include vertical-gradient(rgba($white, 0), rgba($white, 0.1));
+	}
+
 	// Label section
 	&#label {
+		min-height: 100vh;
 		background: rgba($white, 0.25);
 
 		.section__header h2 {

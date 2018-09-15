@@ -13,21 +13,19 @@
 
       <div class="lang-switcher">
         {% if site.lang == "en" %}
-          {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
-          <a href="{{ link2 }}" >{% t global.turkish %}</a>
+          <a href="{{ site.baseurl_root }}{{ page.url }}" >{% t global.turkish %}</a>
         {% else %}
-          {% capture link1 %}{{ site.baseurl_root }}en{{ page.url}}{% endcapture %}
-          <a href="{{ link1 }}" >{% t global.english %}</a>
+          <a href="{{ site.baseurl_root }}en{{ page.url}" >{% t global.english %}</a>
         {% endif %}
       </div>
     </section>
     
     {% include nav.html %}
 
-    <div class="section">
+    <section class="section" id="releases">
 
       <div class="row row--nopadding">
-        <section class="col-xs-12 col-sm-4" id="releases">
+        <div class="col-xs-12 col-sm-4">
 
           <div class="section__header"></div>
 
@@ -77,8 +75,16 @@
             </ul>
           </div>
 
-        </section>
-        <section class="col-xs-12 col-sm-4" id="artists">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section" id="artists">
+
+      <div class="row row--nopadding">
+
+        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
 
           <div class="section__header"></div>
 
@@ -126,12 +132,10 @@
             </ul>
 
           </div>
-
-        </section>
-
+        </div>
       </div>
 
-    </div>
+    </section>
 
     {% assign sections = site.sections %}
     {% for section in sections %}

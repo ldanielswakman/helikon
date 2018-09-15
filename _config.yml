@@ -31,8 +31,6 @@ keywords:
 google_analytics: UA-125404318-1
 
 # Multi language
-plugins:
-  - jekyll-multiple-languages-plugin
 languages: ["tr", "en"]
 
 # Scss build settings
