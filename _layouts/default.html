@@ -13,9 +13,9 @@
 
       <div class="lang-switcher">
         {% if site.lang == "en" %}
-          <a href="{{ site.baseurl_root }}{{ page.url }}" >Türkçe</a>
+          <a href="{{ site.baseurl_root }}{{ page.url }}" >{{ site.data.lang.tr.lang_label }}</a>
         {% else %}
-          <a href="{{ site.baseurl_root }}en{{ page.url}}" >English</a>
+          <a href="{{ site.baseurl_root }}en{{ page.url}}" >{{ site.data.lang.en.lang_label }}</a>
         {% endif %}
       </div>
     </section>
@@ -41,7 +41,7 @@
                       <figure class="thumb thumb--release thumb--empty"></figure>
                     {% endif %}
                     <span class="item__info">
-                      <h4>{{ release.title }}</h4>
+                      <h4>{{ release.title | capitalize }}</h4>
                       <p class="meta">{{ release.year }}</p>
                     </span>
                   </a>
