@@ -16,5 +16,5 @@ fields:
   name: content_en
   label: Content (EN)
 pages:
-- _artists/kutsal-kaan-bilgin.md
 - _artists/onur-ertem.md
+- _artists/kutsal-kaan-bilgin.md
