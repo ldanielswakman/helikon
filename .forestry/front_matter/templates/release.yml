@@ -1,6 +1,6 @@
 ---
 label: Release
-hide_body: false
+hide_body: true
 is_partial: false
 fields:
 - type: text
@@ -22,5 +22,11 @@ fields:
 - type: text
   name: spotify_id
   label: Spotify ID
+- type: textarea
+  name: content_tr
+  label: Content (TR)
+- type: textarea
+  name: content_en
+  label: Content (EN)
 pages:
 - _releases/zaman-disi-yasam.md

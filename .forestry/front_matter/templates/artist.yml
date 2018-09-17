@@ -1,6 +1,6 @@
 ---
 label: Artist
-hide_body: false
+hide_body: true
 is_partial: false
 fields:
 - type: text
@@ -9,6 +9,12 @@ fields:
 - type: file
   name: image
   label: image
+- type: textarea
+  name: content_tr
+  label: Content (TR)
+- type: textarea
+  name: content_en
+  label: Content (EN)
 pages:
 - _artists/kutsal-kaan-bilgin.md
 - _artists/onur-ertem.md

@@ -9,7 +9,7 @@
 
       <div id="canvas"></div>
 
-      <h1><span class="text">Helikon</span><img class="logo" src="images/helikon-logo.svg" alt="" /></h1>
+      <h1><span class="text">{{ site.title }}</span><img class="logo" src="images/helikon-logo.svg" alt="" /></h1>
 
       <div class="lang-switcher">
         {% if site.lang == "en" %}
@@ -61,7 +61,11 @@
 
                     <p class="meta"><a href="javascript:openModal('#kutsal-kaan-bilgin')">Kutsal Kaan Bilgin</a>, 2017</p>
 
-                    {{ release.content | markdownify }}
+                    {% if site.lang == "en" %}
+                      {{ release.content_en | markdownify }}
+                    {% else %}
+                      {{ release.content_tr | markdownify }}
+                    {% endif %}
 
                   </div>
 
@@ -118,7 +122,11 @@
                       <figure class="figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
                     {% endif %}
 
-                    {{ artist.content | markdownify }}
+                    {% if site.lang == "en" %}
+                      {{ artist.content_en | markdownify }}
+                    {% else %}
+                      {{ artist.content_tr | markdownify }}
+                    {% endif %}
 
                   </div>
 
