@@ -9,9 +9,6 @@ fields:
 - type: text
   name: year
   label: year
-- type: file
-  name: image
-  label: image
 - type: select
   config:
     source:
@@ -28,5 +25,8 @@ fields:
 - type: textarea
   name: content_en
   label: Content (EN)
+- type: file
+  name: image
+  label: image
 pages:
 - _releases/zaman-disi-yasam.md
