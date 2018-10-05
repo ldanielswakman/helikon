@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: site.default_lang }}">
+<html lang="{{ page.lang | default: site.default_lang }}">
 
 	{% include head.html %}
 
@@ -9,15 +9,10 @@
 
       <div id="canvas"></div>
 
-      <h1><span class="text">{{ site.title }}</span><img class="logo" src="images/helikon-logo.svg" alt="" /></h1>
+      <h1><span class="text">{{ site.title }}</span><img class="logo" src="{{ site.url }}/images/helikon-logo.svg" alt="" /></h1>
 
-      <div class="lang-switcher">
-        {% if site.lang == "en" %}
-          <a href="{{ site.baseurl_root }}{{ page.url }}" >{{ site.data.lang.tr.lang_label }}</a>
-        {% else %}
-          <a href="{{ site.baseurl_root }}en{{ page.url}}" >{{ site.data.lang.en.lang_label }}</a>
-        {% endif %}
-      </div>
+      {% include lang-switcher.html %}
+
     </section>
     
     {% include nav.html %}
@@ -36,7 +31,7 @@
                 <li>
                   <a class="item" href="#{{ release.slug }}">
                     {% if release.image.size > 0 %}
-                      <figure class="thumb thumb--release"><img src="{{ release.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                      <figure class="thumb thumb--release"><img src="{{ site.url }}/{{ release.image }}" alt="" /></figure>
                     {% else %}
                       <figure class="thumb thumb--release thumb--empty"></figure>
                     {% endif %}
@@ -61,7 +56,7 @@
 
                     <p class="meta"><a href="javascript:openModal('#kutsal-kaan-bilgin')">Kutsal Kaan Bilgin</a>, 2017</p>
 
-                    {% if site.lang == "en" %}
+                    {% if page.lang == "en" %}
                       {{ release.content_en | markdownify }}
                     {% else %}
                       {{ release.content_tr | markdownify }}
@@ -70,7 +65,7 @@
                   </div>
 
                   {% if release.image.size > 0 %}
-                    <figure class="modal__figure"><img src="{{ release.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    <figure class="modal__figure"><img src="{{ site.url }}/{{ release.image }}" alt="" /></figure>
                   {% endif %}
 
                 </div>
@@ -100,7 +95,7 @@
                 <li>
                   <a class="item" href="#{{ artist.slug }}">
                     {% if artist.image.size > 0 %}
-                      <figure class="thumb thumb--artist"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                      <figure class="thumb thumb--artist"><img src="{{ site.url }}/{{ artist.image }}" alt="" /></figure>
                     {% else %}
                       <figure class="thumb thumb--artist thumb--empty"></figure>
                     {% endif %}
@@ -119,10 +114,10 @@
                     <h2>{{ artist.title | capitalize }}</h2>
 
                     {% if artist.image.size > 0 %}
-                      <figure class="figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                      <figure class="figure"><img src="{{ site.url }}/{{ artist.image }}" alt="" /></figure>
                     {% endif %}
 
-                    {% if site.lang == "en" %}
+                    {% if page.lang == "en" %}
                       {{ artist.content_en | markdownify }}
                     {% else %}
                       {{ artist.content_tr | markdownify }}
@@ -131,7 +126,7 @@
                   </div>
 
                   {% if artist.image.size > 0 %}
-                    <figure class="modal__figure"><img src="{{ artist.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+                    <figure class="modal__figure"><img src="{{ site.url }}/{{ artist.image }}" alt="" /></figure>
                   {% endif %}
 
                 </div>

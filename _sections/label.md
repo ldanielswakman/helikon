@@ -26,7 +26,7 @@ image: 'uploads/helikon-poster.jpg'
 
 <div class="col-xs-12 col-sm-4">
   {% if page.image.size > 0 %}
-    <figure><img src="{{ page.image | replace: '/uploads', 'uploads' }}" alt="" /></figure>
+    <figure><img src="{{ site.url }}/{{ page.image }}" alt="" /></figure>
   {% endif %}
 </div>
 

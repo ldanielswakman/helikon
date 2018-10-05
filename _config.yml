@@ -32,7 +32,7 @@ google_analytics: UA-125404318-1
 
 # Multi language
 languages: ["tr", "en"]
-default_lang: tr
+lang: tr
 
 # Scss build settings
 sass:
