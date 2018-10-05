@@ -6,14 +6,14 @@ fields:
 - type: text
   name: title
   label: Title
-- type: file
-  name: image
-  label: image
 - type: textarea
   name: content_tr
   label: Content (TR)
 - type: textarea
   name: content_en
   label: Content (EN)
+- type: file
+  name: image
+  label: image
 pages:
 - _sections/label.md
