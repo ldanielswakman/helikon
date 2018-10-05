@@ -92,6 +92,7 @@ $(document).ready(function() {
 function openModal(target) {
   closeModal();
   if($(target).length > 0) {
+    $('body').addClass('hasModalOpen');
     $(target).addClass('isActive');
 
     $parent_id = $(target).closest('section').attr('id');
@@ -108,6 +109,7 @@ function openModal(target) {
 }
 
 function closeModal() {
+  $('body').removeClass('hasModalOpen');
   $('.modal').removeClass('isActive');
   updateHash('');
 }

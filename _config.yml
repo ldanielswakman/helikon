@@ -8,7 +8,7 @@ description_en: >-
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://helikon.media" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ldaniel.eu/_/helikon" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://helikon.media" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ldanielswakman
 github_username:  ldanielswakman
 
