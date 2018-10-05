@@ -19,6 +19,11 @@
     @content;
   }
 }
+@mixin desktopLargeAndUp() {
+  @media screen and (min-width: 75em) {
+    @content;
+  }
+}
 
 // Vertical gradient
 // Permalink - use to edit and share this gradient:

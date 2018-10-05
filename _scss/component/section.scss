@@ -15,7 +15,7 @@
 		flex: 1;
 		padding: 2rem;
 
-		@include tabletAndUp() {
+		@include desktopLargeAndUp() {
 			padding: 2rem 4rem;
 		}
 	}
