@@ -1,3 +1,4 @@
+---
 en:
   lang_label: English
   releases: RELEASES
@@ -7,4 +8,4 @@ tr:
   lang_label: Türkçe
   releases: YAYINLAR
   artists: SANATÇILAR
-  label: ETİKET
+  label: LABEL
