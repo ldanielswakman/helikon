@@ -47,14 +47,17 @@
                   <div class="modal__content">
 
                     <h2>{{ release.title | upcase }}</h2>
+                    <p>
+                      {% assign rel_artist = site.artists | where: "path", release.artist  | first %}
+                      {% if rel_artist %}<a class="meta" href="javascript:openModal('#{{ rel_artist.slug }}')">{{ rel_artist.title }}</a>{% endif %}{% if release.year %}<span class="meta">, {{ release.year }}</span>{% endif %}
+                    </p>
+                    <br />
 
                     {% if release.spotify_id.size > 0 %}
                       <div class="modal__player">
                         <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                       </div>
                     {% endif %}
-
-                    <p class="meta"><a href="javascript:openModal('#kutsal-kaan-bilgin')">Kutsal Kaan Bilgin</a>, 2017</p>
 
                     {% if page.lang == "en" %}
                       {{ release.content_en | markdownify }}
