@@ -3,16 +3,39 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-}
-.lang-switcher a {
 	display: flex;
-	padding: 1rem;
-	opacity: 0.5;
 
-	@include tabletAndUp() {
-		padding: 2rem;
+	a {
+		display: flex;
+		padding: 1rem;
+
+		@include tabletAndUp() {
+			padding: 2rem;
+		}
 	}
-}
-.lang-switcher a:hover {
-	opacity: 1;
+	a:first-child {
+		padding-right: 0.25rem;
+	}
+	a:last-child {
+		padding-left: 0.25rem;
+	}
+	a {
+		opacity: 0.5;
+		
+		&:hover {
+			opacity: 0.8;
+		}
+		&.isActive {
+			opacity: 1;
+		}
+	}
+	.divider {
+		padding: 1rem 0;
+		opacity: 0.5;
+		cursor: default;
+
+		@include tabletAndUp() {
+			padding: 2rem 0;
+		}
+	}
 }

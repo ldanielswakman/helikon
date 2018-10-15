@@ -39,9 +39,18 @@ $(document).on(scrollevents, function() {
 
 
 
+// Component: menuClick
+$(document).ready(function() {
+  $('.menu a').click(function() {
+    closeModal();
+  });
+});
+
+
+
+
 
 // Component: activeSections
-scrollevents = 'ready scroll resize scrollstart scrollstop';
 $(document).on(scrollevents, function() {
   navOnScroll($('section'), $('.menu'));
 });

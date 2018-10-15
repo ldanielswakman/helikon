@@ -36,7 +36,7 @@
                       <figure class="thumb thumb--release thumb--empty"></figure>
                     {% endif %}
                     <span class="item__info">
-                      <h4>{{ release.title | capitalize }}</h4>
+                      <h4>{{ release.title }}</h4>
                       <p class="meta">{{ release.year }}</p>
                     </span>
                   </a>
@@ -46,11 +46,11 @@
                   <a href="javascript:closeModal()" class="modal__close">&times;</a>
                   <div class="modal__content">
 
-                    <h2>{{ release.title }}</h2>
+                    <h2>{{ release.title | upcase }}</h2>
 
                     {% if release.spotify_id.size > 0 %}
                       <div class="modal__player">
-                        <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        <iframe src="https://open.spotify.com/embed?uri=spotify:album:{{ release.spotify_id }}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                       </div>
                     {% endif %}
 
@@ -111,7 +111,7 @@
                     <a href="javascript:closeModal()" class="modal__close">&times;</a>
 
 
-                    <h2>{{ artist.title | capitalize }}</h2>
+                    <h2>{{ artist.title | upcase }}</h2>
 
                     {% if artist.image.size > 0 %}
                       <figure class="figure"><img src="{{ site.url }}/{{ artist.image }}" alt="" /></figure>

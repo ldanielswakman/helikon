@@ -43,4 +43,16 @@
 			color: rgba($white, 0.9);
 		}
 	}
+	// iPhone Tiny exception
+
+	@media screen and (max-width: 21em) {
+		// [class*="col-"] {
+		// 	flex: 1;
+		// 	flex-basis: auto;
+		// }
+		a {
+			padding: 1rem 0.5rem;
+			text-align: center;
+		}
+	}
 }

@@ -13,7 +13,11 @@
 	// Section Block
 	&__block {
 		flex: 1;
-		padding: 2rem;
+		padding: 2rem 1rem;
+
+		@include bigPhoneAndUp() {
+		  padding: 2rem;
+		}
 
 		@include desktopLargeAndUp() {
 			padding: 2rem 4rem;
@@ -41,6 +45,8 @@
 		.section__header h2 {
 			margin-left: percentage(2/3);
 		}
+
+		p { opacity: 0.8; }
 	}
 }
 

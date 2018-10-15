@@ -1,7 +1,5 @@
 <div class="lang-switcher">
-  {% if page.lang == "en" %}
-    <a href="{{ site.url }}" >{{ site.data.lang.tr.lang_label }}</a>
-  {% else %}
-    <a href="{{ site.url }}/en" >{{ site.data.lang.en.lang_label }}</a>
-  {% endif %}
+  <a href="{{ site.url }}" {% if page.lang == "tr" %}class="isActive"{% endif %}>{{ site.data.lang.tr.lang_code }}</a>
+  <span class="divider">/</span>
+  <a href="{{ site.url }}/en" {% if page.lang == "en" %}class="isActive"{% endif %}>{{ site.data.lang.en.lang_code }}</a>
 </div>

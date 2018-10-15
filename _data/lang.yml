@@ -1,11 +1,13 @@
 ---
 en:
   lang_label: English
+  lang_code: EN
   releases: RELEASES
   artists: ARTISTS
   label: LABEL
 tr:
   lang_label: Türkçe
+  lang_code: TR
   releases: YAYINLAR
   artists: SANATÇILAR
   label: HELİKON
