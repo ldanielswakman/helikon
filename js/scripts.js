@@ -34,6 +34,8 @@ $(document).on(scrollevents, function() {
   } else {
   	$('.menu').removeClass('isStuck');
   }
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
 
