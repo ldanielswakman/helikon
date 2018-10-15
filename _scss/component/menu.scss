@@ -20,12 +20,22 @@
 
 	a {
 		display: block;
-		padding: 1rem;
+		padding: 1rem 0.25rem;
 		font-family: "Baron Neue";
 		letter-spacing: 0.05rem;
-		font-size: 1.125rem;
+		font-size: 0.875rem;
 		line-height: 2rem;
 		color: rgba($white, 0.2);
+		text-align: center;
+
+		@include phoneAndUp() {
+			font-size: 1rem;
+		}
+
+		@include bigPhoneAndUp() {
+			font-size: 1.125rem;
+			padding: 1rem;
+		}
 
 		@include tabletAndUp() {
 			padding: 2rem;
@@ -41,18 +51,6 @@
 		}
 		&.isActive {
 			color: rgba($white, 0.9);
-		}
-	}
-	// iPhone Tiny exception
-
-	@media screen and (max-width: 21em) {
-		// [class*="col-"] {
-		// 	flex: 1;
-		// 	flex-basis: auto;
-		// }
-		a {
-			padding: 1rem 0.5rem;
-			text-align: center;
 		}
 	}
 }
