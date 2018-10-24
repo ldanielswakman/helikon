@@ -106,10 +106,12 @@ $menuHeight_sm: 6rem;
 	&__player iframe {
 		margin: 0 -1rem 1rem;
 		width: 100vw !important;
+		max-height: 80px;
 
 		@include tabletAndUp() {
 			margin: 0;
 			width: auto !important;
+			max-height: auto;
 		}
 	}
 

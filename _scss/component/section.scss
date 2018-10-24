@@ -27,8 +27,14 @@
 
 	&#intro {
 		min-height: 100vh;
-		#canvas {
-			opacity: 0.2;
+		background-color: #161a23;
+		background-image: url('/images/wave-canvas.jpg');
+		background-size: 1500px 100%;
+		background-position: center;
+    animation: animateBG 20s linear infinite;
+
+		@include tabletAndUp() {
+			animation-duration: 20s;
 		}
 	}
 
@@ -50,3 +56,9 @@
 	}
 }
 
+
+// Animation for wave background
+@keyframes animateBG {
+  0% { background-position: -1500px center; }
+  100% { background-position: 1500px center; }
+}
