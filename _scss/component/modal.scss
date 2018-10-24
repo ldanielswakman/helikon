@@ -12,6 +12,7 @@ $menuHeight_sm: 6rem;
 	/*align-self: center;*/
 	flex: 1;
 	height: calc(100% - #{$menuHeight_xs});
+	width: 100%;
 	background: #7A8699;
 
 	transition: all 0.3s ease-in-out;
@@ -22,7 +23,7 @@ $menuHeight_sm: 6rem;
 	@include tabletAndUp() {
 		top: $menuHeight_sm;
 		height: calc(100% - #{$menuHeight_sm});
-		max-width: percentage(2/3);
+		width: percentage(2/3);
 	}
 
 	// Caret
