@@ -112,7 +112,7 @@ $menuHeight_sm: 6rem;
 		@include tabletAndUp() {
 			margin: 0;
 			width: auto !important;
-			max-height: auto;
+			max-height: 100vh;
 		}
 	}
 

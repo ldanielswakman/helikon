@@ -60,5 +60,7 @@
 // Animation for wave background
 @keyframes animateBG {
   0% { background-position: -1500px center; }
+  30% { background-position: -400px center; }
+  60% { background-position: 700px center; }
   100% { background-position: 1500px center; }
 }
