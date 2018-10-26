@@ -14,7 +14,7 @@ content_en: Sapan,  ilk  albümü  Anlık  İzler’i  Babajim  Stüdyoları  ve
   yola çıkarak ortaya çıkarılan "Anlık  İzler", bireyin hayatında yaşadığı birbirinden
   bağımsız tecrübe ve duyguların birleştiği anların bir iz düşümünü dinleyiciye Türkçe
   ve Fransızca parçalarıyla sunuyor.
-image: ''
+image: uploads/Sapan - Anlık İzler - artwork.png
 published: false
 
 ---
