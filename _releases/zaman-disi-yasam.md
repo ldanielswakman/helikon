@@ -1,6 +1,6 @@
 ---
 title: Zaman Dışı Yaşam
-year: 2017
+year: 2018
 image: "/uploads/zaman-disi-yasam.jpg"
 spotify_id: 4VYVS5UYXZFPLJg2spKJ0j
 artist: _artists/kutsal-kaan-bilgin.md
