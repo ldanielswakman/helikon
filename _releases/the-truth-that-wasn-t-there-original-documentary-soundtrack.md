@@ -23,6 +23,5 @@ content_en: |-
   Uluslararası Af Örgütü tarafından desteklenen filmin müzikleri
   orijinal 11 besteden oluşuyor.
 image: uploads/the_truth_cover.jpg
-published: false
 
 ---
