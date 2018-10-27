@@ -7,6 +7,5 @@ spotify_id: 4tuUFXn7vGdDJZvvDEblYQ
 content_tr: Blah.
 content_en: Blah en.
 image: uploads/kutsal.jpg
-published: false
 
 ---
