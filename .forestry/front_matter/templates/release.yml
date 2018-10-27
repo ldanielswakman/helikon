@@ -29,6 +29,7 @@ fields:
   name: image
   label: image
 pages:
+- _releases/here-is-another-album-with-a-very-very-long-name-a-very-long-name-indeed.md
 - _releases/test-release-with-a-real-long-name-this-is-ineed-a-very-long-name-for-an-album.md
 - _releases/anatolian-opium-wars.md
 - _releases/the-truth-that-wasn-t-there-original-documentary-soundtrack.md
