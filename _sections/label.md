@@ -10,7 +10,7 @@ content_en: |-
   Helikon was started in 2017 in İstanbul. Label is named after the Helikon Association, which was an arts association founded in Ankara in 1955 by a group of intellectuals including composers Bülent Arel and İlhan Usmanbaş. Helikon Association was closed down by the state due to its Greek-origin name after the Istanbul Pogrom of 6-7 September 1955.
 
   In mythology, Helikon is the name of the mountain where the two springs sacred to the muses, Aganippe and Hippocrene, were located. Helikon is considered a source of poetic inspiration.
-image: uploads/helikon-poster.jpg
+image: uploads/helikon dribbble-06.jpg
 
 ---
 <div class="row" style="flex: 1;">
