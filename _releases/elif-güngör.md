@@ -16,5 +16,6 @@ content_tr: "“Komşuları Uyandırmadan”, İstanbul’lu söz yazarı ve mü
 content_en: ''
 image: uploads/KAPAK.png
 date: 2019-01-12 08:54:27 +0000
+published: false
 
 ---
