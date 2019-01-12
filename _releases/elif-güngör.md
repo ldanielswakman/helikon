@@ -1,7 +1,7 @@
 ---
-title: Elif Güngör
+title: Komşuları Uyandırmadan
 year: 2019
-artist: _artists/kutsal-kaan-bilgin.md
+artist: _artists/elif-güngör.md
 spotify_id: 2DVr8ldZiFi5AFotKrKggD
 content_tr: "“Komşuları Uyandırmadan”, İstanbul’lu söz yazarı ve müzisyen Elif Güngör’ün
   ilk EP çalışması. Daha önce şarkılarının demo kayıtlarını SoundCloud ve YouTube
