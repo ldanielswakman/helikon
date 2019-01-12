@@ -9,6 +9,5 @@ content_tr: Albüm Onur Ertem'in 2008 - 2013 arasında kaydettiği elektronik fu
 content_en: Albüm Onur Ertem'in 2008 - 2013 arasında kaydettiği elektronik fusion
   parçalardan oluşuyor.
 image: uploads/onur_ertem_aow.png
-published: false
 
 ---

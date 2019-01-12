@@ -29,7 +29,7 @@ fields:
   name: image
   label: image
 pages:
-- _releases/anatolian-opium-wars.md
 - _releases/anlık-i̇zler.md
+- _releases/anatolian-opium-wars.md
 - _releases/the-truth-that-wasn-t-there-original-documentary-soundtrack.md
 - _releases/zaman-disi-yasam.md
