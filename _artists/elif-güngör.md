@@ -21,6 +21,5 @@ content_tr: "Elif Güngör 1993 yılında İstanbul’da dünyaya geldi. 14 yaş
 content_en: ''
 image: uploads/elif_01.jpg
 date: 2019-01-12 08:52:45 +0000
-published: false
 
 ---
