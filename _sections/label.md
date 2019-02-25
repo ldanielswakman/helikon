@@ -15,7 +15,7 @@ image: uploads/helikon dribbble-06.jpg
 ---
 <div class="row" style="flex: 1;">
 
-<div class="col-xs-12 col-sm-8">
+<div class="col-xs-12 col-sm-7 col-lg-8">
   <div class="section__block">
   {% if site.lang == "en" %}
     {{ page.content_en | markdownify }}
@@ -25,10 +25,12 @@ image: uploads/helikon dribbble-06.jpg
 	</div>
 </div>
 
-<div class="col-xs-12 col-sm-4">
-  {% if page.image.size > 0 %}
-    <figure><img src="{{ site.url }}/{{ page.image }}" alt="" /></figure>
-  {% endif %}
+<div class="col-xs-12 col-sm-5 col-lg-4">
+  <div class="section__block section__image">
+    {% if page.image.size > 0 %}
+      <figure><img src="{{ site.url }}/{{ page.image }}" alt="" /></figure>
+    {% endif %}
+  </div>
 </div>
 
 </div>

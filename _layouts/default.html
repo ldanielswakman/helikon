@@ -20,13 +20,16 @@
     <section class="section" id="releases">
 
       <div class="row row--nopadding">
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-md-8">
 
           <div class="section__header"></div>
 
           <div class="section__block">
             <ul class="list">
-              {% for release in site.releases %}
+              {% assign sorted_releases = site.releases | sort: 'year' | reverse %}
+              {% for release in sorted_releases %}
+
+                {% assign rel_artist = site.artists | where: "path", release.artist  | first %}
 
                 <li>
                   <a class="item" href="#{{ release.slug }}">
@@ -37,7 +40,11 @@
                     {% endif %}
                     <span class="item__info">
                       <h4>{{ release.title }}</h4>
-                      <p class="meta">{{ release.year }}</p>
+                      <p class="meta">
+                        {% if rel_artist %}
+                          {{ rel_artist.title }}{% endif %}{% if release.year %}<span class="meta">, {{ release.year }}</span>
+                        {% endif %}
+                      </p>
                     </span>
                   </a>
                 </li>
@@ -48,7 +55,6 @@
 
                     <h2>{{ release.title | upcase }}</h2>
                     <p>
-                      {% assign rel_artist = site.artists | where: "path", release.artist  | first %}
                       {% if rel_artist %}<a class="meta" href="javascript:openModal('#{{ rel_artist.slug }}')">{{ rel_artist.title }}</a>{% endif %}{% if release.year %}<span class="meta">, {{ release.year }}</span>{% endif %}
                     </p>
                     <br />
@@ -93,7 +99,8 @@
           <div class="section__block">
             
             <ul class="list">
-              {% for artist in site.artists %}
+              {% assign sorted_artists = site.artists | sort: 'title' %}
+              {% for artist in sorted_artists %}
 
                 <li>
                   <a class="item" href="#{{ artist.slug }}">

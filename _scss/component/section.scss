@@ -53,6 +53,12 @@
 		}
 
 		p { opacity: 0.8; }
+
+		@include tabletAndUp() {
+			.section__block.section__image {
+				padding-left: 0;
+			}
+		}
 	}
 }
 
